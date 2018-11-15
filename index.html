@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="
+width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title></title>
+        <script type="text/javascript">
+            (function a() {
+                var clientWidth = document.documentElement.clientWidth;
+                if (clientWidth < 769) {
+                    var width = Math.min(clientWidth, 750);
+                    var e = width / 7.5;
+                    document.documentElement.style.fontSize = e + 'px';
+                }
+                window.addEventListener('resize', a);
+            })();
+        </script>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <center>
+            <h1>A reproduce of Firefox FOUC</h1>
+            <article>
+                Setting CSS before CSS link causes FOUC.
+            </article>
+        </center>
+    </body>
+</html>
